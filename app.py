@@ -25,7 +25,7 @@ LABELS_ES={
 
 @st.cache_resource
 def cargar_modelo():
-    for path in MODEL_PATHS:
+    for path in MODEL_PATH:
         if path.exists():
             return tf.keras.models.load_model(path, compile=False)
     st.error("No se encontró el modelo. Coloque la carpeta modelo_reciclaje_mobilenet junto a app.py.")
